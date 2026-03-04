@@ -1,0 +1,17 @@
+-- ROM3: Palabra "bEAdEd"
+-- b=11  E=14  A=10  d=13  E=14  d=13
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY rom3 IS
+    PORT(DIR : IN  INTEGER RANGE 0 TO 15;
+         SAL : OUT INTEGER RANGE 0 TO 15);
+END ENTITY;
+
+ARCHITECTURE BEAS OF rom3 IS
+    TYPE MEMORY IS ARRAY(0 TO 9) OF INTEGER RANGE 0 TO 15;
+    --                   sp  sp   b   E   A   d   E   d  sp  sp
+    CONSTANT ROM: MEMORY := (0, 0, 11, 14, 10, 13, 14, 13, 0, 0);
+BEGIN
+    SAL <= ROM(DIR);
+END BEAS;

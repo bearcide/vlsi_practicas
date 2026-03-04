@@ -1,0 +1,17 @@
+-- ROM2: Palabra "DECADE"
+-- d=13  E=14  C=12  A=10  d=13  E=14
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY rom2 IS
+    PORT(DIR : IN  INTEGER RANGE 0 TO 15;
+         SAL : OUT INTEGER RANGE 0 TO 15);
+END ENTITY;
+
+ARCHITECTURE BEAS OF rom2 IS
+    TYPE MEMORY IS ARRAY(0 TO 9) OF INTEGER RANGE 0 TO 15;
+    --                   sp  sp   d   E   C   A   d   E  sp  sp
+    CONSTANT ROM: MEMORY := (0, 0, 13, 14, 12, 10, 13, 14, 0, 0);
+BEGIN
+    SAL <= ROM(DIR);
+END BEAS;

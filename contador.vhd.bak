@@ -1,0 +1,23 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY contador IS
+    PORT(CLK, RST: IN STD_LOGIC;
+            CUENTA: BUFFER INTEGER RANGE 0 TO 10);
+END ENTITY;
+
+ARCHITECTURE BEAS OF contador IS
+BEGIN
+    PROCESS(CLK, RST)
+    BEGIN
+        IF RISING_EDGE(CLK) THEN 
+            IF RST = '1' THEN
+                CUENTA <= 0;
+            ELSIF CUENTA = 10 THEN
+                CUENTA <= 0;
+            ELSE
+                CUENTA <= CUENTA +1;
+            END IF;
+        END IF;
+    END PROCESS;    
+END BEAS;    

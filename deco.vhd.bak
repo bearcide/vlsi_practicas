@@ -1,0 +1,29 @@
+-- DECODIFICADOR 4 A 8 
+-- LÓGICA NEGADA
+-- Para tarjeta: 10M50DAF484C7G
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY deco IS 
+    PORT(
+        NUM: IN INTEGER RANGE 0 TO 15;   -- 4 bits de entrada (0-15)
+        SAL: OUT STD_LOGIC_VECTOR(0 TO 7) -- 8 bits de salida
+    );
+END ENTITY;
+
+ARCHITECTURE BEAS OF deco IS 
+BEGIN
+
+    WITH NUM SELECT
+        SAL <= "01111111" WHEN 0,
+               "10111111" WHEN 1,
+               "11011111" WHEN 2,
+               "11101111" WHEN 3,
+               "11110111" WHEN 4,
+               "11111011" WHEN 5,
+               "11111101" WHEN 6,
+               "11111110" WHEN 7,
+               "11111111" WHEN OTHERS; -- Apagado para valores del 8 al 15
+
+END BEAS;

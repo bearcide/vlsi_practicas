@@ -1,0 +1,25 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY divisor IS
+    GENERIC(FREC: INTEGER := 5000000);
+    PORT(CLK_MST: IN STD_LOGIC;
+            CLK: BUFFER STD_LOGIC);
+END ENTITY;
+
+ARCHITECTURE BEAS OF divisor IS
+SIGNAL AUX: INTEGER RANGE O TO FREC; -- AUX = (50 MHZ) / ((2*f_deseada) -1)
+BEGIN
+    PROCESS(CLK_MST)
+    BEGIN
+        IF FALLING_EDGE(CLK) THEN
+            IF AUX = 0 THEN
+                CLK <= CLK;
+                AUX <= FREC;
+            ELSE
+                UX <= AUX - 1;
+            END IF;
+        END IF;
+    END PROCESS;
+
+END BEAS;    

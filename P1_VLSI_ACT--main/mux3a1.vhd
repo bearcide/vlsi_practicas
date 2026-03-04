@@ -1,0 +1,17 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY mux3a1 IS
+    PORT(P1, P2, P3 : IN  INTEGER RANGE 0 TO 15;
+         SEL        : IN  INTEGER RANGE 0 TO 2;
+         SALIDA     : OUT INTEGER RANGE 0 TO 15);
+END ENTITY;
+
+ARCHITECTURE BEAS OF mux3a1 IS
+BEGIN
+    WITH SEL SELECT
+        SALIDA <= P1 WHEN 0,
+                  P2 WHEN 1,
+                  P3 WHEN 2,
+                  0  WHEN OTHERS;
+END BEAS;
