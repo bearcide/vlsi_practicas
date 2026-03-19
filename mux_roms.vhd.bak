@@ -1,0 +1,21 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY mux_roms IS
+    PORT(
+        SEL      : IN  STD_LOGIC; -- Entrada de selección (0 o 1)
+        ROM_A    : IN  STD_LOGIC_VECTOR(0 TO 7); -- Salida de la primera ROM
+        ROM_B    : IN  STD_LOGIC_VECTOR(0 TO 7); -- Salida de la segunda ROM
+        SEG_OUT  : OUT STD_LOGIC_VECTOR(0 TO 7)  -- Salida hacia los pines del display
+    );
+END ENTITY;
+
+ARCHITECTURE BEAS OF mux_roms IS
+BEGIN 
+    -- Si SEL es '0' pasa la ROM_A, si es '1' pasa la ROM_B
+    WITH SEL SELECT
+        SEG_OUT <= ROM_A WHEN '0',
+                   ROM_B WHEN '1',
+                   "11111111" WHEN OTHERS; -- Apagado por seguridad
+                  
+END BEAS;
