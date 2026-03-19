@@ -131,42 +131,6 @@ on the Quartus Prime software download page.
 	(annotation_block (parameter)(rect 320 96 517 126))
 )
 (symbol
-	(rect 888 224 1064 336)
-	(text "COMP" (rect 5 0 38 11)(font "Arial" ))
-	(text "inst5" (rect 8 96 31 107)(font "DejaVu Sans Condensed" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "CLK" (rect 0 0 22 11)(font "Arial" ))
-		(text "CLK" (rect 21 27 43 38)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "CONT[2..0]" (rect 0 0 59 11)(font "Arial" ))
-		(text "CONT[2..0]" (rect 21 43 80 54)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "CT[2..0]" (rect 0 0 42 11)(font "Arial" ))
-		(text "CT[2..0]" (rect 21 59 63 70)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 176 32)
-		(output)
-		(text "PWM" (rect 0 0 27 11)(font "Arial" ))
-		(text "PWM" (rect 133 27 160 38)(font "Arial" ))
-		(line (pt 176 32)(pt 160 32))
-	)
-	(drawing
-		(rectangle (rect 16 16 160 96))
-	)
-)
-(symbol
 	(rect 608 152 792 232)
 	(text "contador" (rect 5 0 53 11)(font "Arial" ))
 	(text "inst1" (rect 8 64 35 75)(font "Arial" ))
@@ -187,8 +151,8 @@ on the Quartus Prime software download page.
 	(port
 		(pt 184 32)
 		(output)
-		(text "CUENTA[2..0]" (rect 0 0 73 11)(font "Arial" ))
-		(text "CUENTA[2..0]" (rect 102 27 175 38)(font "Arial" ))
+		(text "CUENTA[3..0]" (rect 0 0 73 11)(font "Arial" ))
+		(text "CUENTA[3..0]" (rect 102 27 163 38)(font "Arial" ))
 		(line (pt 184 32)(pt 168 32)(line_width 3))
 	)
 	(drawing
@@ -198,23 +162,59 @@ on the Quartus Prime software download page.
 (symbol
 	(rect 848 40 1064 120)
 	(text "deco" (rect 5 0 30 11)(font "Arial" ))
-	(text "inst6" (rect 8 64 31 75)(font "DejaVu Sans Condensed" ))
+	(text "inst6" (rect 8 64 35 75)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "ENTRADAS[2..0]" (rect 0 0 87 11)(font "Arial" ))
-		(text "ENTRADAS[2..0]" (rect 21 27 108 38)(font "Arial" ))
+		(text "ENTRADAS[3..0]" (rect 0 0 87 11)(font "Arial" ))
+		(text "ENTRADAS[3..0]" (rect 21 27 108 38)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
 		(pt 216 32)
 		(output)
 		(text "SEG[0..7]" (rect 0 0 50 11)(font "Arial" ))
-		(text "SEG[0..7]" (rect 153 27 203 38)(font "Arial" ))
+		(text "SEG[0..7]" (rect 153 27 195 38)(font "Arial" ))
 		(line (pt 216 32)(pt 200 32)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 200 64))
+	)
+)
+(symbol
+	(rect 888 224 1064 336)
+	(text "COMP" (rect 5 0 38 11)(font "Arial" ))
+	(text "inst5" (rect 8 96 35 107)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 22 11)(font "Arial" ))
+		(text "CLK" (rect 21 27 43 38)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "CONT[3..0]" (rect 0 0 59 11)(font "Arial" ))
+		(text "CONT[3..0]" (rect 21 43 80 54)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "CT[2..0]" (rect 0 0 42 11)(font "Arial" ))
+		(text "CT[2..0]" (rect 21 59 63 70)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 176 32)
+		(output)
+		(text "PWM" (rect 0 0 27 11)(font "Arial" ))
+		(text "PWM" (rect 133 27 155 38)(font "Arial" ))
+		(line (pt 176 32)(pt 160 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 160 96))
 	)
 )
 (connector

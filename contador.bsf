@@ -41,8 +41,8 @@ on the Quartus Prime software download page.
 	(port
 		(pt 184 32)
 		(output)
-		(text "CUENTA[2..0]" (rect 0 0 62 12)(font "Arial" ))
-		(text "CUENTA[2..0]" (rect 101 27 163 39)(font "Arial" ))
+		(text "CUENTA[3..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "CUENTA[3..0]" (rect 101 27 163 39)(font "Arial" ))
 		(line (pt 184 32)(pt 168 32)(line_width 3))
 	)
 	(drawing

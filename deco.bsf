@@ -27,8 +27,8 @@ on the Quartus Prime software download page.
 	(port
 		(pt 0 32)
 		(input)
-		(text "ENTRADAS[2..0]" (rect 0 0 77 12)(font "Arial" ))
-		(text "ENTRADAS[2..0]" (rect 21 27 98 39)(font "Arial" ))
+		(text "ENTRADAS[3..0]" (rect 0 0 77 12)(font "Arial" ))
+		(text "ENTRADAS[3..0]" (rect 21 27 98 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port

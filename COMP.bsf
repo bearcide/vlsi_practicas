@@ -34,8 +34,8 @@ on the Quartus Prime software download page.
 	(port
 		(pt 0 48)
 		(input)
-		(text "CONT[2..0]" (rect 0 0 47 12)(font "Arial" ))
-		(text "CONT[2..0]" (rect 21 43 68 55)(font "Arial" ))
+		(text "CONT[3..0]" (rect 0 0 47 12)(font "Arial" ))
+		(text "CONT[3..0]" (rect 21 43 68 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port

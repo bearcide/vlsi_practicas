@@ -36,10 +36,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "RST",
-					"strict" : false
-				},
-				{
 					"name" : "CT[2]",
 					"strict" : false
 				},
@@ -49,6 +45,10 @@
 				},
 				{
 					"name" : "CT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RST",
 					"strict" : false
 				},
 				{
