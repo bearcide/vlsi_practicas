@@ -1,0 +1,73 @@
+# ============================================================
+# teclado_top.qsf
+# Pin assignments para DE10-Lite - Teclado matricial 4x4
+# ============================================================
+set_global_assignment -name FAMILY "MAX 10"
+set_global_assignment -name DEVICE 10M50DAF484C7G
+set_global_assignment -name TOP_LEVEL_ENTITY teclado_top
+
+# --- Reloj 50 MHz ---
+set_location_assignment PIN_N14 -to CLK
+
+# --- Columnas del teclado (Output, activo en bajo) ---
+set_location_assignment PIN_AA8 -to COL[0]
+set_location_assignment PIN_AA9 -to COL[1]
+set_location_assignment PIN_AB10 -to COL[2]
+set_location_assignment PIN_AB11 -to COL[3]
+
+# --- Filas del teclado (Input) ---
+set_location_assignment PIN_AB12 -to FIL[0]
+set_location_assignment PIN_W12 -to FIL[1]
+set_location_assignment PIN_AA14 -to FIL[2]
+set_location_assignment PIN_W5 -to FIL[3]
+
+# --- Pull-up debil en las filas (MAX10 interno) ---
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to FIL[0]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to FIL[1]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to FIL[2]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to FIL[3]
+
+# --- Estandar de voltaje 3.3V para TODOS los pines del teclado ---
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FIL[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FIL[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FIL[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FIL[3]
+
+# --- Display 7 segmentos HEX0 ---
+set_location_assignment PIN_C14 -to SAL[7]
+set_location_assignment PIN_E15 -to SAL[6]
+set_location_assignment PIN_C15 -to SAL[5]
+set_location_assignment PIN_C16 -to SAL[4]
+set_location_assignment PIN_E16 -to SAL[3]
+set_location_assignment PIN_D17 -to SAL[2]
+set_location_assignment PIN_C17 -to SAL[1]
+set_location_assignment PIN_D15 -to SAL[0]
+
+# --- Archivos fuente VHDL ---
+set_global_assignment -name VHDL_FILE divisor.vhd
+set_global_assignment -name VHDL_FILE conta.vhd
+set_global_assignment -name VHDL_FILE colraw.vhd
+set_global_assignment -name VHDL_FILE decotecla.vhd
+set_global_assignment -name VHDL_FILE deco7seg.vhd
+set_global_assignment -name VHDL_FILE teclado_top.vhd
+
+set_global_assignment -name LAST_QUARTUS_VERSION "25.1std.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name EDA_SIMULATION_TOOL "Questa Altera FPGA (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
