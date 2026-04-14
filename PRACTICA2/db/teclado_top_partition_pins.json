@@ -1,0 +1,73 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "COL[3]",
+					"strict" : false
+				},
+				{
+					"name" : "COL[2]",
+					"strict" : false
+				},
+				{
+					"name" : "COL[1]",
+					"strict" : false
+				},
+				{
+					"name" : "COL[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SAL[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SAL[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SAL[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SAL[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SAL[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SAL[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SAL[7]",
+					"strict" : false
+				},
+				{
+					"name" : "FIL[2]",
+					"strict" : false
+				},
+				{
+					"name" : "FIL[1]",
+					"strict" : false
+				},
+				{
+					"name" : "FIL[0]",
+					"strict" : false
+				},
+				{
+					"name" : "FIL[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

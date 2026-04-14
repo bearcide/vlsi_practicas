@@ -1,0 +1,133 @@
+|teclado_top
+CLK => divisor:inst5.CLK
+FIL[3] => colraw:inst1.FIL[3]
+FIL[2] => colraw:inst1.FIL[2]
+FIL[1] => colraw:inst1.FIL[1]
+FIL[0] => colraw:inst1.FIL[0]
+COL[3] << colraw:inst1.COL[3]
+COL[2] << colraw:inst1.COL[2]
+COL[1] << colraw:inst1.COL[1]
+COL[0] << colraw:inst1.COL[0]
+SAL[0] << deco7seg:inst8.SAL[0]
+SAL[1] << deco7seg:inst8.SAL[1]
+SAL[2] << deco7seg:inst8.SAL[2]
+SAL[3] << deco7seg:inst8.SAL[3]
+SAL[4] << deco7seg:inst8.SAL[4]
+SAL[5] << deco7seg:inst8.SAL[5]
+SAL[6] << deco7seg:inst8.SAL[6]
+SAL[7] << deco7seg:inst8.SAL[7]
+
+
+|teclado_top|divisor:inst5
+CLK => clk_int.CLK
+CLK => cuenta_div[0].CLK
+CLK => cuenta_div[1].CLK
+CLK => cuenta_div[2].CLK
+CLK => cuenta_div[3].CLK
+CLK => cuenta_div[4].CLK
+CLK => cuenta_div[5].CLK
+CLK => cuenta_div[6].CLK
+CLK => cuenta_div[7].CLK
+CLK => cuenta_div[8].CLK
+CLK => cuenta_div[9].CLK
+CLK => cuenta_div[10].CLK
+CLK => cuenta_div[11].CLK
+CLK_MST <= clk_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|teclado_top|conta:inst4
+CLK => cnt[3].CLK
+CLK => cnt[2].CLK
+CLK => cnt[1].CLK
+CLK => cnt[0].CLK
+HAB => ~NO_FANOUT~
+CUENTA[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+CUENTA[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+CUENTA[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+CUENTA[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|teclado_top|colraw:inst1
+CUENTA[3] => Mux4.IN5
+CUENTA[2] => Mux4.IN4
+CUENTA[1] => Mux0.IN5
+CUENTA[1] => Mux1.IN5
+CUENTA[1] => Mux2.IN5
+CUENTA[1] => Mux3.IN5
+CUENTA[0] => Mux0.IN4
+CUENTA[0] => Mux1.IN4
+CUENTA[0] => Mux2.IN4
+CUENTA[0] => Mux3.IN4
+FIL[3] => Mux4.IN3
+FIL[2] => Mux4.IN2
+FIL[1] => Mux4.IN1
+FIL[0] => Mux4.IN0
+COL[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+COL[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+COL[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+COL[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+HAB <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|teclado_top|decotecla:inst7
+CUENTA[3] => Mux0.IN19
+CUENTA[3] => Mux1.IN19
+CUENTA[3] => Mux2.IN19
+CUENTA[3] => Mux3.IN19
+CUENTA[2] => Mux0.IN18
+CUENTA[2] => Mux1.IN18
+CUENTA[2] => Mux2.IN18
+CUENTA[2] => Mux3.IN18
+CUENTA[1] => Mux0.IN17
+CUENTA[1] => Mux1.IN17
+CUENTA[1] => Mux2.IN17
+CUENTA[1] => Mux3.IN17
+CUENTA[0] => Mux0.IN16
+CUENTA[0] => Mux1.IN16
+CUENTA[0] => Mux2.IN16
+CUENTA[0] => Mux3.IN16
+TECLA[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+TECLA[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+TECLA[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+TECLA[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|teclado_top|deco7seg:inst8
+NUMERO[0] => Mux0.IN19
+NUMERO[0] => Mux1.IN19
+NUMERO[0] => Mux2.IN19
+NUMERO[0] => Mux3.IN19
+NUMERO[0] => Mux4.IN19
+NUMERO[0] => Mux5.IN19
+NUMERO[0] => Mux6.IN19
+NUMERO[1] => Mux0.IN18
+NUMERO[1] => Mux1.IN18
+NUMERO[1] => Mux2.IN18
+NUMERO[1] => Mux3.IN18
+NUMERO[1] => Mux4.IN18
+NUMERO[1] => Mux5.IN18
+NUMERO[1] => Mux6.IN18
+NUMERO[2] => Mux0.IN17
+NUMERO[2] => Mux1.IN17
+NUMERO[2] => Mux2.IN17
+NUMERO[2] => Mux3.IN17
+NUMERO[2] => Mux4.IN17
+NUMERO[2] => Mux5.IN17
+NUMERO[2] => Mux6.IN17
+NUMERO[3] => Mux0.IN16
+NUMERO[3] => Mux1.IN16
+NUMERO[3] => Mux2.IN16
+NUMERO[3] => Mux3.IN16
+NUMERO[3] => Mux4.IN16
+NUMERO[3] => Mux5.IN16
+NUMERO[3] => Mux6.IN16
+SAL[0] <= <VCC>
+SAL[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+SAL[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+SAL[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+SAL[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+SAL[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+SAL[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+SAL[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
