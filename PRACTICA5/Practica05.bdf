@@ -1,0 +1,273 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect 80 200 248 216)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "CLK" (rect 5 0 27 11)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 16 216 80 232))
+)
+(pin
+	(input)
+	(rect 64 120 232 136)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "DEC" (rect 5 0 25 11)(font "DejaVu Sans Condensed" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 8 136 64 152))
+)
+(pin
+	(input)
+	(rect 64 64 232 80)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "INC" (rect 5 0 22 11)(font "DejaVu Sans Condensed" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 8 80 64 96))
+)
+(pin
+	(output)
+	(rect 824 248 1000 264)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "SAL[0..7]" (rect 90 0 139 11)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 1000 264 1064 280))
+)
+(pin
+	(output)
+	(rect 848 152 1024 168)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "LED" (rect 90 0 111 11)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 1024 168 1088 184))
+)
+(symbol
+	(rect 344 144 528 256)
+	(text "asm" (rect 5 0 27 11)(font "Arial" ))
+	(text "inst" (rect 8 96 28 107)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "INC" (rect 0 0 18 11)(font "Arial" ))
+		(text "INC" (rect 21 27 39 38)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "DEC" (rect 0 0 22 11)(font "Arial" ))
+		(text "DEC" (rect 21 43 43 54)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "CLK" (rect 0 0 22 11)(font "Arial" ))
+		(text "CLK" (rect 21 59 43 70)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 184 32)
+		(output)
+		(text "CUENTA[2..0]" (rect 0 0 73 11)(font "Arial" ))
+		(text "CUENTA[2..0]" (rect 107 27 180 38)(font "Arial" ))
+		(line (pt 184 32)(pt 168 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 96))
+	)
+)
+(symbol
+	(rect 600 128 808 208)
+	(text "pwm" (rect 5 0 30 11)(font "Arial" ))
+	(text "inst5" (rect 8 64 31 75)(font "DejaVu Sans Condensed" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 22 11)(font "Arial" ))
+		(text "CLK" (rect 21 27 43 38)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "VALOR[2..0]" (rect 0 0 64 11)(font "Arial" ))
+		(text "VALOR[2..0]" (rect 21 43 85 54)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "PWM_OUT" (rect 0 0 54 11)(font "Arial" ))
+		(text "PWM_OUT" (rect 142 27 196 38)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 192 64))
+	)
+)
+(symbol
+	(rect 600 224 784 304)
+	(text "deco" (rect 5 0 30 11)(font "Arial" ))
+	(text "inst3" (rect 8 64 35 75)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "NUM[2..0]" (rect 0 0 54 11)(font "Arial" ))
+		(text "NUM[2..0]" (rect 21 27 75 38)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 184 32)
+		(output)
+		(text "SAL[0..7]" (rect 0 0 49 11)(font "Arial" ))
+		(text "SAL[0..7]" (rect 122 27 163 38)(font "Arial" ))
+		(line (pt 184 32)(pt 168 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 64))
+	)
+)
+(connector
+	(pt 344 192)
+	(pt 304 192)
+)
+(connector
+	(pt 344 176)
+	(pt 320 176)
+)
+(connector
+	(pt 320 176)
+	(pt 320 72)
+)
+(connector
+	(pt 232 72)
+	(pt 320 72)
+)
+(connector
+	(pt 304 192)
+	(pt 304 128)
+)
+(connector
+	(pt 232 128)
+	(pt 304 128)
+)
+(connector
+	(pt 272 208)
+	(pt 272 112)
+)
+(connector
+	(pt 248 208)
+	(pt 272 208)
+)
+(connector
+	(pt 272 208)
+	(pt 344 208)
+)
+(connector
+	(pt 272 112)
+	(pt 576 112)
+)
+(connector
+	(pt 600 160)
+	(pt 576 160)
+)
+(connector
+	(pt 576 112)
+	(pt 576 160)
+)
+(connector
+	(pt 808 160)
+	(pt 848 160)
+)
+(connector
+	(pt 544 256)
+	(pt 600 256)
+	(bus)
+)
+(connector
+	(pt 544 176)
+	(pt 544 256)
+	(bus)
+)
+(connector
+	(pt 528 176)
+	(pt 544 176)
+	(bus)
+)
+(connector
+	(pt 544 176)
+	(pt 600 176)
+	(bus)
+)
+(connector
+	(pt 784 256)
+	(pt 824 256)
+	(bus)
+)
+(junction (pt 272 208))
+(junction (pt 544 176))
