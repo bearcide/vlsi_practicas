@@ -1,0 +1,128 @@
+|Practica05
+LED <= pwm:inst5.PWM_OUT
+CLK => pwm:inst5.CLK
+CLK => asm:inst.CLK
+INC => asm:inst.INC
+DEC => asm:inst.DEC
+SAL[7] <= deco:inst3.SAL[7]
+SAL[6] <= deco:inst3.SAL[6]
+SAL[5] <= deco:inst3.SAL[5]
+SAL[4] <= deco:inst3.SAL[4]
+SAL[3] <= deco:inst3.SAL[3]
+SAL[2] <= deco:inst3.SAL[2]
+SAL[1] <= deco:inst3.SAL[1]
+SAL[0] <= deco:inst3.SAL[0]
+
+
+|Practica05|pwm:inst5
+CLK => rampa[0].CLK
+CLK => rampa[1].CLK
+CLK => clk_pwm[0].CLK
+CLK => clk_pwm[1].CLK
+CLK => clk_pwm[2].CLK
+CLK => clk_pwm[3].CLK
+CLK => clk_pwm[4].CLK
+CLK => clk_pwm[5].CLK
+CLK => clk_pwm[6].CLK
+CLK => clk_pwm[7].CLK
+CLK => clk_pwm[8].CLK
+CLK => clk_pwm[9].CLK
+CLK => clk_pwm[10].CLK
+CLK => clk_pwm[11].CLK
+CLK => clk_pwm[12].CLK
+VALOR[0] => LessThan0.IN4
+VALOR[0] => Equal2.IN2
+VALOR[0] => Equal3.IN1
+VALOR[1] => LessThan0.IN3
+VALOR[1] => Equal2.IN1
+VALOR[1] => Equal3.IN0
+VALOR[2] => LessThan0.IN2
+VALOR[2] => Equal2.IN0
+VALOR[2] => Equal3.IN2
+PWM_OUT <= PWM_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica05|asm:inst
+INC => reg_inc[0].DATAIN
+DEC => reg_dec[0].DATAIN
+CLK => presionado.CLK
+CLK => CUENTA[0]~reg0.CLK
+CLK => CUENTA[1]~reg0.CLK
+CLK => CUENTA[2]~reg0.CLK
+CLK => reg_dec[0].CLK
+CLK => reg_dec[1].CLK
+CLK => reg_dec[2].CLK
+CLK => reg_inc[0].CLK
+CLK => reg_inc[1].CLK
+CLK => reg_inc[2].CLK
+CUENTA[0] <= CUENTA[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CUENTA[1] <= CUENTA[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CUENTA[2] <= CUENTA[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica05|deco:inst3
+NUM[0] => Mux0.IN263
+NUM[0] => Mux1.IN263
+NUM[0] => Mux2.IN263
+NUM[0] => Mux4.IN263
+NUM[0] => Mux5.IN263
+NUM[0] => Mux6.IN263
+NUM[1] => Mux0.IN262
+NUM[1] => Mux1.IN262
+NUM[1] => Mux2.IN262
+NUM[1] => Mux3.IN134
+NUM[1] => Mux4.IN262
+NUM[1] => Mux5.IN262
+NUM[1] => Mux6.IN262
+NUM[2] => Mux0.IN261
+NUM[2] => Mux1.IN261
+NUM[2] => Mux2.IN261
+NUM[2] => Mux3.IN133
+NUM[2] => Mux4.IN261
+NUM[2] => Mux5.IN261
+NUM[2] => Mux6.IN261
+NUM[3] => Mux0.IN260
+NUM[3] => Mux1.IN260
+NUM[3] => Mux2.IN260
+NUM[3] => Mux3.IN132
+NUM[3] => Mux4.IN260
+NUM[3] => Mux5.IN260
+NUM[3] => Mux6.IN260
+NUM[4] => Mux0.IN259
+NUM[4] => Mux1.IN259
+NUM[4] => Mux2.IN259
+NUM[4] => Mux3.IN131
+NUM[4] => Mux4.IN259
+NUM[4] => Mux5.IN259
+NUM[4] => Mux6.IN259
+NUM[5] => Mux0.IN258
+NUM[5] => Mux1.IN258
+NUM[5] => Mux2.IN258
+NUM[5] => Mux3.IN130
+NUM[5] => Mux4.IN258
+NUM[5] => Mux5.IN258
+NUM[5] => Mux6.IN258
+NUM[6] => Mux0.IN257
+NUM[6] => Mux1.IN257
+NUM[6] => Mux2.IN257
+NUM[6] => Mux3.IN129
+NUM[6] => Mux4.IN257
+NUM[6] => Mux5.IN257
+NUM[6] => Mux6.IN257
+NUM[7] => Mux0.IN256
+NUM[7] => Mux1.IN256
+NUM[7] => Mux2.IN256
+NUM[7] => Mux3.IN128
+NUM[7] => Mux4.IN256
+NUM[7] => Mux5.IN256
+NUM[7] => Mux6.IN256
+SAL[7] <= <VCC>
+SAL[6] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+SAL[5] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+SAL[4] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+SAL[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+SAL[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+SAL[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+SAL[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
