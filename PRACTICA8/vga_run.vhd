@@ -1,0 +1,94 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+ENTITY vga_run IS
+PORT(CLK, RST, VIDEO: IN STD_LOGIC; 
+	  HPOS: IN INTEGER RANGE 0 TO 799;
+	  VPOS: IN INTEGER RANGE 0 TO 524;
+	  R, G, B: OUT STD_LOGIC_VECTOR(3 DOWNTO 0)); 
+END vga_run;
+ARCHITECTURE BEAS OF vga_run IS
+BEGIN
+	PROCESS(CLK, RST, HPOS, VPOS, VIDEO)
+	BEGIN
+		IF RST = '1' THEN
+			R <= "0000"; G <= "0000"; B <= "0000";
+		ELSIF FALLING_EDGE(CLK) THEN
+			IF VIDEO = '1' THEN
+				IF (HPOS >= 240 AND HPOS <= 260) AND (VPOS >= 40 AND VPOS <= 80) THEN
+					R <= "1111"; G <= "1100"; B <= "0000"; 
+				ELSIF (HPOS >= 300 AND HPOS <= 340) AND (VPOS >= 40 AND VPOS <= 80) THEN
+					R <= "1111"; G <= "1100"; B <= "0000"; 
+				ELSIF (HPOS >= 380 AND HPOS <= 400) AND (VPOS >= 40 AND VPOS <= 80) THEN
+					R <= "1111"; G <= "1100"; B <= "0000"; 
+				ELSIF (HPOS >= 220 AND HPOS <= 420) AND (VPOS >= 60 AND VPOS <= 80) THEN
+					R <= "1111"; G <= "1100"; B <= "0000"; 
+				ELSIF (HPOS >= 200 AND HPOS <= 440) AND (VPOS >= 80 AND VPOS <= 100) THEN
+					R <= "0000"; G <= "0000"; B <= "0000"; 
+				ELSIF (HPOS >= 200 AND HPOS <= 220) AND (VPOS >= 80 AND VPOS <= 360) THEN
+					R <= "0000"; G <= "0000"; B <= "0000"; 
+				ELSIF (HPOS >= 420 AND HPOS <= 440) AND (VPOS >= 80 AND VPOS <= 360) THEN
+					R <= "0000"; G <= "0000"; B <= "0000"; 
+				ELSIF (HPOS >= 240 AND HPOS <= 260) AND (VPOS >= 360 AND VPOS <= 380) THEN
+					R <= "0000"; G <= "0000"; B <= "0000"; 
+				ELSIF (HPOS >= 400 AND HPOS <= 420) AND (VPOS >= 360 AND VPOS <= 380) THEN
+					R <= "0000"; G <= "0000"; B <= "0000"; 
+				ELSIF (HPOS >= 280 AND HPOS <= 300) AND (VPOS >= 380 AND VPOS <= 400) THEN
+					R <= "0000"; G <= "0000"; B <= "0000"; 
+				ELSIF (HPOS >= 340 AND HPOS <= 360) AND (VPOS >= 380 AND VPOS <= 400) THEN
+					R <= "0000"; G <= "0000"; B <= "0000"; 
+				ELSIF (HPOS >= 300 AND HPOS <= 340) AND (VPOS >= 400 AND VPOS <= 420) THEN
+					R <= "0000"; G <= "0000"; B <= "0000"; 
+				ELSIF (HPOS >= 240 AND HPOS <= 260) AND (VPOS >= 100 AND VPOS <= 140) THEN
+					R <= "0000"; G <= "0000"; B <= "0000"; 
+				ELSIF (HPOS >= 380 AND HPOS <= 400) AND (VPOS >= 100 AND VPOS <= 140) THEN
+					R <= "0000"; G <= "0000"; B <= "0000"; 
+				ELSIF (HPOS >= 260 AND HPOS <= 280) AND (VPOS >= 160 AND VPOS <= 180) THEN
+					R <= "0000"; G <= "0000"; B <= "0000"; 
+				ELSIF (HPOS >= 360 AND HPOS <= 380) AND (VPOS >= 160 AND VPOS <= 180) THEN
+					R <= "0000"; G <= "0000"; B <= "0000"; 
+				ELSIF (HPOS >= 300 AND HPOS <= 340) AND (VPOS >= 200 AND VPOS <= 220) THEN
+					R <= "0000"; G <= "0000"; B <= "0000"; 
+				ELSIF (HPOS >= 300 AND HPOS <= 320) AND (VPOS >= 220 AND VPOS <= 240) THEN
+					R <= "0000"; G <= "0000"; B <= "0000"; 
+				ELSIF (HPOS >= 320 AND HPOS <= 340) AND (VPOS >= 220 AND VPOS <= 240) THEN
+					R <= "0000"; G <= "0000"; B <= "0000"; 
+				ELSIF (HPOS >= 280 AND HPOS <= 300) AND (VPOS >= 240 AND VPOS <= 260) THEN
+					R <= "0000"; G <= "0000"; B <= "0000"; 
+				ELSIF (HPOS >= 340 AND HPOS <= 360) AND (VPOS >= 240 AND VPOS <= 260) THEN
+					R <= "0000"; G <= "0000"; B <= "0000"; 
+				ELSIF (HPOS >= 240 AND HPOS <= 260) AND (VPOS >= 220 AND VPOS <= 240) THEN
+					R <= "0000"; G <= "0000"; B <= "0000"; 
+				ELSIF (HPOS >= 380 AND HPOS <= 400) AND (VPOS >= 220 AND VPOS <= 240) THEN
+					R <= "0000"; G <= "0000"; B <= "0000"; 
+				ELSIF (HPOS >= 240 AND HPOS <= 300) AND (VPOS >= 140 AND VPOS <= 180) THEN
+					R <= "1111"; G <= "1111"; B <= "1111"; 
+				ELSIF (HPOS >= 340 AND HPOS <= 400) AND (VPOS >= 140 AND VPOS <= 180) THEN
+					R <= "1111"; G <= "1111"; B <= "1111"; 
+				ELSIF (HPOS >= 240 AND HPOS <= 300) AND (VPOS >= 180 AND VPOS <= 260) THEN
+					R <= "1111"; G <= "1111"; B <= "1111"; 
+				ELSIF (HPOS >= 340 AND HPOS <= 400) AND (VPOS >= 180 AND VPOS <= 260) THEN
+					R <= "1111"; G <= "1111"; B <= "1111"; 
+				ELSIF (HPOS >= 300 AND HPOS <= 340) AND (VPOS >= 240 AND VPOS <= 280) THEN
+					R <= "1111"; G <= "1111"; B <= "1111"; 
+				ELSIF (HPOS >= 260 AND HPOS <= 380) AND (VPOS >= 100 AND VPOS <= 140) THEN
+					R <= "1111"; G <= "1100"; B <= "0000"; 
+				ELSIF (HPOS >= 300 AND HPOS <= 340) AND (VPOS >= 140 AND VPOS <= 200) THEN
+					R <= "1111"; G <= "1100"; B <= "0000"; 
+				ELSIF (HPOS >= 260 AND HPOS <= 380) AND (VPOS >= 260 AND VPOS <= 300) THEN
+					R <= "1111"; G <= "1100"; B <= "0000"; 
+				ELSIF (HPOS >= 220 AND HPOS <= 420) AND (VPOS >= 100 AND VPOS <= 300) THEN
+					R <= "0000"; G <= "0000"; B <= "1111"; 
+				ELSIF (HPOS >= 220 AND HPOS <= 420) AND (VPOS >= 300 AND VPOS <= 360) THEN
+					R <= "1111"; G <= "1100"; B <= "0000"; 
+				ELSIF (HPOS >= 260 AND HPOS <= 400) AND (VPOS >= 360 AND VPOS <= 380) THEN
+					R <= "1111"; G <= "1100"; B <= "0000"; 
+				ELSIF (HPOS >= 300 AND HPOS <= 340) AND (VPOS >= 380 AND VPOS <= 400) THEN
+					R <= "0000"; G <= "0000"; B <= "1111"; 
+				ELSE
+					R <= "1111"; G <= "1111"; B <= "1111"; 
+				END IF;
+			END IF;
+		END IF;
+	END PROCESS;
+END BEAS;
